@@ -64,8 +64,8 @@ modules:
             - --with-openssl
         sources:
           - type: archive
-            url: https://ftp.postgresql.org/pub/source/v18.1/postgresql-18.1.tar.gz
-            sha256: b0f18c2d6973d2aa023cfc77feda787d7bbe9c31a3977d0f04ac29885fb98ec4
+            url: https://ftp.postgresql.org/pub/source/v18.2/postgresql-18.2.tar.gz
+            sha256: 85268ec707b72665ecc88daf5438e84081dc07d9d16326ebf3ef9a5fec9ce1e0
             x-checker-data:
               type: anitya
               project-id: 381406
@@ -83,7 +83,8 @@ modules:
               type: json
               url: https://api.github.com/repos/jemalloc/jemalloc/releases/latest
               version-query: .tag_name
-              url-query: '"https://github.com/jemalloc/jemalloc/archive/" + .tag_name + ".tar.gz"'
+              url-query: '"https://github.com/jemalloc/jemalloc/archive/" + .tag_name
+                + ".tar.gz"'
               timestamp-query: .published_at
 
       - name: libaio
@@ -150,7 +151,8 @@ modules:
           type: json
           url: https://api.github.com/repos/sionescu/libfixposix/releases/latest
           version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://github.com/sionescu/libfixposix/archive/" + .tag_name + ".tar.gz"'
+          url-query: '"https://github.com/sionescu/libfixposix/archive/" + .tag_name
+            + ".tar.gz"'
           timestamp-query: .published_at
       - type: script
         dest-filename: autogen.sh
