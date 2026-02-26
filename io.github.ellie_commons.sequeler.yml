@@ -64,8 +64,8 @@ modules:
             - --with-openssl
         sources:
           - type: archive
-            url: https://ftp.postgresql.org/pub/source/v18.1/postgresql-18.1.tar.gz
-            sha256: b0f18c2d6973d2aa023cfc77feda787d7bbe9c31a3977d0f04ac29885fb98ec4
+            url: https://ftp.postgresql.org/pub/source/v18.3/postgresql-18.3.tar.gz
+            sha256: 9e054ffd6e013da2c2c9a1bfd6e062c98875d340df080516551c96b9b0926a59
             x-checker-data:
               type: anitya
               project-id: 381406
@@ -83,7 +83,8 @@ modules:
               type: json
               url: https://api.github.com/repos/jemalloc/jemalloc/releases/latest
               version-query: .tag_name
-              url-query: '"https://github.com/jemalloc/jemalloc/archive/" + .tag_name + ".tar.gz"'
+              url-query: '"https://github.com/jemalloc/jemalloc/archive/" + .tag_name
+                + ".tar.gz"'
               timestamp-query: .published_at
 
       - name: libaio
@@ -123,8 +124,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/MariaDB/server.git
-            tag: mariadb-12.2.1
-            commit: 144dead8826f4a84008a76ef7fcc44e816f92930
+            tag: mariadb-12.3.1
+            commit: 21a0714a118614982d20bfa504763d7247800091
             x-checker-data:
               type: git
               tag-pattern: ^mariadb-([\d.]+)$
@@ -150,7 +151,8 @@ modules:
           type: json
           url: https://api.github.com/repos/sionescu/libfixposix/releases/latest
           version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://github.com/sionescu/libfixposix/archive/" + .tag_name + ".tar.gz"'
+          url-query: '"https://github.com/sionescu/libfixposix/archive/" + .tag_name
+            + ".tar.gz"'
           timestamp-query: .published_at
       - type: script
         dest-filename: autogen.sh
