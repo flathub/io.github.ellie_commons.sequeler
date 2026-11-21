@@ -166,7 +166,5 @@ modules:
         - -Dsized-app-icon=false
     sources:
       - type: archive
-        url: https://github.com/ellie-commons/sequeler/archive/v0.9.0-1.tar.gz
-        sha256: 600b86f5c34c8301c9499f51c45495d321dc2e64d77e10e9333582d942896251
-      - type: patch
-        path: 0002-Application-Force-elementary-stylesheet-to-prevent-b.patch
+        url: https://github.com/ellie-commons/sequeler/archive/v0.9.1.tar.gz
+        sha256: 780b5066cce3a7ef333b0d2033b947623804cfbb8ff9a89ab273954845049292
